@@ -10,6 +10,9 @@
  */
 
 ?>
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"align":"full","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull">
+
 <!-- wp:group {"align":"full","backgroundColor":"secondary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-secondary-background-color has-background"><!-- wp:spacer {"height":"200px"} -->
 <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -26,8 +29,8 @@
 <p class="has-text-align-left has-large-font-size" style="margin-bottom:15px"><?php esc_html_e( 'This page could not be found.', 'patterns-store-front' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"left","style":{"spacing":{"margin":{"bottom":"30px"}}},"fontSize":"small"} -->
-<p class="has-text-align-left has-small-font-size" style="margin-bottom:30px"><?php esc_html_e( 'We can\'t find the page you\'re looking for. Check out our Help Center or head back to home', 'patterns-store-front' ); ?>
+<!-- wp:paragraph {"align":"left","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}},"fontSize":"small"} -->
+<p class="has-text-align-left has-small-font-size" style="margin-bottom:var(--wp--preset--spacing--30)"><?php esc_html_e( 'We can\'t find the page you\'re looking for. Check out our Help Center or head back to home', 'patterns-store-front' ); ?>
 </p>
 <!-- /wp:paragraph -->
 
@@ -46,4 +49,7 @@
 <!-- wp:spacer {"height":"200px"} -->
 <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer --></div>
+<!-- /wp:group -->
+ 
+</main>
 <!-- /wp:group -->

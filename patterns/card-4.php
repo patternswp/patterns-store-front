@@ -11,12 +11,12 @@
  */
 
 ?>
-<!-- wp:group {"style":{"border":{"radius":"5px"},"className":"at-box-sdw","spacing":{"padding":{"top":"30px","bottom":"30px","left":"30px","right":"30px"}}},"backgroundColor":"default","layout":{"type":"constrained"}} -->
-<div class="wp-block-group at-box-sdw has-default-background-color has-background" style="border-radius:5px;padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"800"},"spacing":{"margin":{"bottom":"5px"}}},"fontSize":"x-large"} -->
-<p class="has-text-align-center  has-x-large-font-size" style="margin-bottom:5px;font-style:normal;font-weight:800"><?php esc_html_e( '10M+', 'patterns-store-front' ); ?></p>
+<!-- wp:group {"style":{"border":{"radius":"5px"},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"default","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-default-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"800"}},"fontSize":"x-large"} -->
+<p class="has-text-align-center has-x-large-font-size" style="font-style:normal;font-weight:800"><?php esc_html_e( '10M+', 'patterns-store-front' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px","lineHeight":"1.2"},"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"textColor":"accent"} -->
-<p class="has-text-align-center has-accent-color has-text-color " style="margin-top:0px;margin-bottom:0px;font-size:14px;line-height:1.2"><?php esc_html_e( 'Contrary to popular', 'patterns-store-front' ); ?></p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"},"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"textColor":"accent","fontSize":"small"} -->
+<p class="has-accent-color has-text-color has-small-font-size" style="margin-top:0px;margin-bottom:0px;line-height:1.5"><?php esc_html_e( 'Contrary to popular', 'patterns-store-front' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->

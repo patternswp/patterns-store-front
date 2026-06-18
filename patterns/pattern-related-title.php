@@ -10,8 +10,8 @@
  */
 
 ?>
-<!-- wp:spacer {"height":"40px"} -->
-<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+<div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"level":5,"placeholder":"<?php esc_attr_e( 'Pattern related title', 'patterns-store-front' ); ?>","metadata":{"bindings":{"content":{"source":"patterns-store/related-items-title","args":{"key":"patterns_store_pattern_related_title"}}}},"align":"full"} -->
@@ -22,6 +22,6 @@
 <hr class="wp-block-separator alignfull has-text-color has-quinary-color has-alpha-channel-opacity has-quinary-background-color has-background is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:spacer {"height":"20px"} -->
-<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var:preset|spacing|20"} -->
+<div style="height:var(--wp--preset--spacing--20)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->

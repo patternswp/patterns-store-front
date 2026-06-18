@@ -11,8 +11,8 @@
  */
 
 ?>
-<!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"80px","bottom":"80px"}}}} -->
-<div class="wp-block-columns alignwide" style="padding-top:80px;padding-bottom:80px">
+<!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}}} -->
+<div class="wp-block-columns alignwide" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":4} -->
@@ -46,7 +46,7 @@
 					<!-- wp:post-template {"align":"wide", "style":{"typography":{"textTransform":"none"}}} -->
 					<!-- wp:group {"layout":{"type":"constrained","contentSize":"780px","justifyContent":"left","wideSize":"780px"}} -->
 					<div class="wp-block-group">
-						<!-- wp:group {"style":{"spacing":{"blockGap":"10px","padding":{"bottom":"0"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
+						<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10","padding":{"bottom":"0"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
 						<div class="wp-block-group" style="padding-bottom: 0">
 							<!-- wp:post-title {"isLink":true,"style":{"layout":{"selfStretch":"fit"},"typography":{"lineHeight":"1","fontStyle":"normal","fontWeight":"500","fontSize":"18px"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"textColor":"contrast","className":"is-style-title-hover-secondary-color"} /-->
 
@@ -61,10 +61,11 @@
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|40","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained","justifyContent":"left","contentSize":"780px"}} -->
 				<div class="wp-block-group" style="margin-top: 0; margin-bottom: 0; padding-top: var(--wp--preset--spacing--60); padding-right: 0; padding-bottom: var(--wp--preset--spacing--40); padding-left: 0">
+					<!-- wp:pattern {"slug":"patterns-store-front/pagination"} /-->
 					<?php
-						// Need to include from PHP since wp:pattern not working
-						// <!-- wp:pattern {"slug":"patterns-store-front/pagination"} /--> .
-						require 'pagination.php';
+					// Need to include from PHP since wp:pattern not working
+					// <!-- wp:pattern {"slug":"patterns-store-front/pagination"} /--> .
+					require 'pagination.php';
 					?>
 				</div>
 				<!-- /wp:group -->

@@ -1,44 +1,64 @@
-@import '../_global';
+@use '../_global';
+@use "../mixins";
+@use "../prefix-vars";
+
 
 // Absolute Header
 body {
     &:not(.admin-bar) {
-        #{$themePrefix} {
+        #{prefix-vars.$themePrefix} {
             &-header {
-                #{$varPrefix}-t: 0;
+                #{prefix-vars.$varPrefix}-t: 0;
             }
         }
     }
 }
 
-#{$themePrefix} {
+#{prefix-vars.$themePrefix} {
 
     //Absolute Header
     &-header {
-        #{$varPrefix}-pos: absolute;
-        #{$varPrefix}-t: var(--wp-admin--admin-bar--height);
-        #{$varPrefix}-l: 0;
-        #{$varPrefix}-r: 0;
-        #{$varPrefix}-z-idx: 9;
+        #{prefix-vars.$varPrefix}-pos: absolute;
+        #{prefix-vars.$varPrefix}-t: var(--wp-admin--admin-bar--height);
+        #{prefix-vars.$varPrefix}-l: 0;
+        #{prefix-vars.$varPrefix}-r: 0;
+        #{prefix-vars.$varPrefix}-z-idx: 9;
     }
 
     // Hero Banner
     &-hero {
         &-banner {
-            #{$varPrefix}-pos: relative;
+            #{prefix-vars.$varPrefix}-pos: relative;
 
-            @include respond-above(xxl) {
-                min-height: 85vh !important;
+            @include mixins.respond-below(xs) {
+                min-height: 80vh !important;
+            }
+
+            &.wp-block-cover {
+                .wp-block-cover__inner-container {
+                    position: static;
+                }
+            }
+
+            .wp-block-cover__image-background {
+                @include mixins.respond-below(xs) {
+                    object-fit: contain !important;
+                    object-position: 0% 100% !important;
+                }
             }
 
             &-content {
-                #{$varPrefix}-pos: relative;
-                #{$varPrefix}-z-idx: 2;
+                #{prefix-vars.$varPrefix}-pos: relative;
+                #{prefix-vars.$varPrefix}-z-idx: 2;
+
+                @include mixins.respond-above(lg) {
+                    margin-top: calc(var(--wp--preset--spacing--80) * -1);
+                }
             }
 
             .at-svg {
-                #{$varPrefix}-cl: var(--wp--preset--color--secondary);
-                #{$varPrefix}-pos: absolute;
+                #{prefix-vars.$varPrefix}-cl: var(--wp--preset--color--secondary);
+                #{prefix-vars.$varPrefix}-pos: absolute;
                 max-width: 100%;
             }
         }
@@ -48,41 +68,41 @@ body {
     &-is-h-w {
         &-40 {
             $hw40: 40px;
-            #{$varPrefix}-h: $hw40;
-            #{$varPrefix}-w: $hw40;
+            #{prefix-vars.$varPrefix}-h: $hw40;
+            #{prefix-vars.$varPrefix}-w: $hw40;
         }
 
         &-70 {
             $hw70: 70px;
-            #{$varPrefix}-h: $hw70;
-            #{$varPrefix}-w: $hw70;
+            #{prefix-vars.$varPrefix}-h: $hw70;
+            #{prefix-vars.$varPrefix}-w: $hw70;
         }
     }
 
     //Global SVG Color and Spacing
     &-svg {
         &-icon {
-            #{$varPrefix}-cl: var(--wp--preset--color--primary);
-            #{$varPrefix}-m: 0 0 30px 0;
+            #{prefix-vars.$varPrefix}-cl: var(--wp--preset--color--primary);
+            #{prefix-vars.$varPrefix}-m: 0 0 30px 0;
         }
     }
 
     //SVG Shapes top and bottom
     &-shape {
         &-t {
-            #{$varPrefix}-t: 0;
-            #{$varPrefix}-z-idx: 1;
-            #{$varPrefix}-l: 0;
-            #{$varPrefix}-r: 0;
-            #{$varPrefix}-h: 120px;
+            #{prefix-vars.$varPrefix}-t: 0;
+            #{prefix-vars.$varPrefix}-z-idx: 1;
+            #{prefix-vars.$varPrefix}-l: 0;
+            #{prefix-vars.$varPrefix}-r: 0;
+            #{prefix-vars.$varPrefix}-h: 120px;
         }
 
         &-b {
-            #{$varPrefix}-b: 0;
-            #{$varPrefix}-z-idx: 1;
-            #{$varPrefix}-l: 0;
-            #{$varPrefix}-r: 0;
-            #{$varPrefix}-h: 120px;
+            #{prefix-vars.$varPrefix}-b: 0;
+            #{prefix-vars.$varPrefix}-z-idx: 1;
+            #{prefix-vars.$varPrefix}-l: 0;
+            #{prefix-vars.$varPrefix}-r: 0;
+            #{prefix-vars.$varPrefix}-h: 120px;
         }
     }
 }

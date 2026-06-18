@@ -24,16 +24,10 @@ if ( ! function_exists( 'patterns_store_front_get_recommended_plugins' ) ) :
 	function patterns_store_front_get_recommended_plugins() {
 		$plugins = array(
 			array(
-				'name'   => esc_html__( 'Patterns Store', 'patterns-store-front' ), // The plugin name.
-				'slug'   => 'patterns-store', // The plugin slug (eg: gutentor is the plugin slug https://wordpress.org/plugins/gutentor).
-				'plugin' => 'patterns-store/patterns-store.php', // The plugin folder and main file.
-				'url'    => 'https://wordpress.org/plugins/patterns-store/', // The plugin url.
-			),
-			array(
-				'name'   => esc_html__( 'Advanced Import', 'patterns-store-front' ), // The plugin name.
-				'slug'   => 'advanced-import', // The plugin slug (eg: gutentor is the plugin slug https://wordpress.org/plugins/gutentor).
-				'plugin' => 'advanced-import/advanced-import.php', // The plugin folder and main file.
-				'url'    => 'https://wordpress.org/plugins/advanced-import/', // The plugin url.
+				'name'   => esc_html__( 'Advanced Import', 'patterns-store-front' ),
+				'slug'   => 'advanced-import',
+				'plugin' => 'advanced-import/advanced-import.php',
+				'url'    => 'https://wordpress.org/plugins/advanced-import/',
 			),
 		);
 

@@ -3,7 +3,7 @@ Contributors: patternswp, codersantosh
 Requires at least: 6.6
 Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 1.0.5
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,16 @@ https://pxhere.com/en/photo/51009
 https://pxhere.com/en/photo/644378
 https://pxhere.com/en/photo/1633004
 
+=== Icons Images ===
+
+https://icons.getbootstrap.com/
+
+Bootstrap Icons
+Copyright (c) 2019-2023 The Bootstrap Authors
+License: MIT License, https://opensource.org/licenses/MIT
+Source: https://github.com/twbs/icons
+
+
 == Frequently Asked Questions ==
 
 = How to install theme? =
@@ -88,6 +98,16 @@ https://pxhere.com/en/photo/1633004
 <div class="at-row"><div class="at-col-6"><label>[text* your-name autocomplete:name placeholder "Your name"] </label></div><div class="at-col-6"><label>[email* your-email autocomplete:email placeholder "Your email"] </label></div><div class="at-col-6"><label>[text* your-subject placeholder "Subject"] </label></div><div class="at-col-6">[text* text-215 placeholder "Phone Number"]</div><div class="at-col-12"><label>[textarea your-message placeholder "Your message (optional)"] </label></div><div class="at-col-12">[submit "Send Message"]</div></div>
 
 == Changelog ==
+
+= 1.0.7 =
+* Organized typography folder
+* Converted fonts format .ttf to .woff2
+* Added duotone
+* Fixed skip to content
+
+= 1.0.6 - 2025-02-06 =
+* Updated: Responsive design using spacing/spacingSizes in theme.json and corresponding variables in patterns
+* Updated: Converting SVG to Image
 
 = 1.0.5 - 2024-11-12 =
 * Added: "Pages" pattern category.

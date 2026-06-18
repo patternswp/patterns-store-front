@@ -1,15 +1,15 @@
-# Copyright (C) 2024 patternswp
+#  Copyright (C) 2025 patternswp
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Patterns Store Front 1.0.5\n"
+"Project-Id-Version: Patterns Store Front 1.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/patterns-store-front\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-12T13:20:13+00:00\n"
+"POT-Creation-Date: 2025-02-07T10:10:14+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: patterns-store-front\n"
@@ -224,7 +224,7 @@ msgid "Install and Activate"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:304
-#: patterns/footer.php:43
+#: patterns/footer.php:33
 msgid "Quick Links"
 msgstr ""
 
@@ -261,7 +261,7 @@ msgid "All Templates"
 msgstr ""
 
 #: admin/templates/page-theme-info.php:348
-#: patterns/faq.php:17
+#: patterns/faq.php:18
 msgid "Frequently Asked Questions"
 msgstr ""
 
@@ -302,6 +302,8 @@ msgid "Search results for: \"%s\""
 msgstr ""
 
 #: includes/class-block-bindings.php:112
+#: patterns/footer.php:37
+#: patterns/navigation-menu.php:17
 msgid "Blog"
 msgstr ""
 
@@ -461,19 +463,20 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: patterns/calendar.php:17
+#: patterns/calendar.php:18
 msgid "Calendar"
 msgstr ""
 
-#: patterns/card-1.php:22
+#: patterns/card-1.php:20
 msgid "Visual Page Builder"
 msgstr ""
 
-#: patterns/card-1.php:26
-#: patterns/card-3.php:26
-#: patterns/featured-section-1.php:60
-#: patterns/featured-section-1.php:78
-#: patterns/featured-section-4.php:40
+#: patterns/card-1.php:24
+#: patterns/card-3.php:24
+#: patterns/featured-section-1.php:37
+#: patterns/featured-section-1.php:55
+#: patterns/featured-section-1.php:71
+#: patterns/featured-section-4.php:42
 #: patterns/featured-section-4.php:73
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatu"
 msgstr ""
@@ -483,21 +486,21 @@ msgid "1"
 msgstr ""
 
 #: patterns/card-2.php:25
-#: patterns/featured-section-2.php:38
+#: patterns/featured-section-2.php:41
 msgid "Customize Typography and Colors Style panel"
 msgstr ""
 
 #: patterns/card-2.php:29
-#: patterns/featured-section-2.php:42
+#: patterns/featured-section-2.php:45
 msgid "Elementum ipsum donec usodales porttitor mauris augue fermentum sagittis elementum."
 msgstr ""
 
-#: patterns/card-3.php:22
+#: patterns/card-3.php:20
 msgid "Application Development"
 msgstr ""
 
-#: patterns/card-3.php:31
-#: patterns/featured-section-4.php:45
+#: patterns/card-3.php:30
+#: patterns/featured-section-4.php:47
 #: patterns/featured-section-4.php:78
 msgid "Continue Reading"
 msgstr ""
@@ -507,16 +510,16 @@ msgid "10M+"
 msgstr ""
 
 #: patterns/card-4.php:20
-#: patterns/featured-section-5.php:41
+#: patterns/featured-section-5.php:42
 msgid "Contrary to popular"
 msgstr ""
 
-#: patterns/card-5.php:22
+#: patterns/card-5.php:20
 msgid "Quality Gurantee"
 msgstr ""
 
-#: patterns/card-5.php:26
-#: patterns/featured-section-6.php:46
+#: patterns/card-5.php:24
+#: patterns/featured-section-6.php:47
 #: patterns/featured-section-6.php:63
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,"
 msgstr ""
@@ -525,45 +528,45 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: patterns/contact-form.php:20
+#: patterns/contact-form.php:21
 msgid "Let’s talk"
 msgstr ""
 
-#: patterns/contact-form.php:25
+#: patterns/contact-form.php:26
 msgid "Feel Free To Contact Us."
 msgstr ""
 
-#: patterns/contact-form.php:29
+#: patterns/contact-form.php:30
 msgid "We’d love to hear from you! Please fill out the form or reach us through the following methods."
 msgstr ""
 
-#: patterns/contact-form.php:35
+#: patterns/contact-form.php:36
 msgid "Get Direction"
 msgstr ""
 
-#: patterns/contact-form.php:39
+#: patterns/contact-form.php:40
 msgid "785 15h Street, Office 478 Berlin, De 81566 6391 Elgin St. Celina, 10299"
 msgstr ""
 
-#: patterns/contact-form.php:45
+#: patterns/contact-form.php:46
 msgid "Phone Number"
 msgstr ""
 
-#: patterns/contact-form.php:49
-#: patterns/contact-form.php:53
+#: patterns/contact-form.php:50
+#: patterns/contact-form.php:54
 msgid "(629) 555-0129"
 msgstr ""
 
-#: patterns/contact-form.php:59
+#: patterns/contact-form.php:60
 msgid "E-mail"
 msgstr ""
 
-#: patterns/contact-form.php:63
-#: patterns/contact-form.php:67
+#: patterns/contact-form.php:64
+#: patterns/contact-form.php:68
 msgid "info@example.com"
 msgstr ""
 
-#: patterns/contact-form.php:78
+#: patterns/contact-form.php:79
 msgid "Add Contact form shortcode"
 msgstr ""
 
@@ -572,76 +575,68 @@ msgid "Dynamic copyright text"
 msgstr ""
 
 #: patterns/details-1.php:15
-#: patterns/featured-section-5.php:62
+#: patterns/featured-section-5.php:76
 msgid "Global search engine optimization"
 msgstr ""
 
 #: patterns/details-1.php:20
-#: patterns/featured-section-5.php:55
-#: patterns/featured-section-5.php:67
-#: patterns/section-title-3.php:20
+#: patterns/featured-section-5.php:62
+#: patterns/featured-section-5.php:81
+#: patterns/section-title-3.php:24
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor"
 msgstr ""
 
-#: patterns/faq.php:21
-#: patterns/faq.php:34
-#: patterns/faq.php:44
-#: patterns/faq.php:68
-#: patterns/faq.php:78
-#: patterns/section-title-5.php:21
-#: patterns/section-title-6.php:20
+#: patterns/faq.php:22
+#: patterns/faq.php:36
+#: patterns/faq.php:47
+#: patterns/faq.php:61
+#: patterns/faq.php:71
+#: patterns/faq.php:81
+#: patterns/section-title-5.php:23
 msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
 msgstr ""
 
-#: patterns/faq.php:29
+#: patterns/faq.php:31
 msgid "What are included in the purchased package?"
 msgstr ""
 
-#: patterns/faq.php:39
+#: patterns/faq.php:42
 msgid "What are the minimal requirements to use admin themes?"
 msgstr ""
 
-#: patterns/faq.php:53
+#: patterns/faq.php:56
 msgid "What are the available payment options?"
 msgstr ""
 
-#: patterns/faq.php:58
-msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old"
-msgstr ""
-
-#: patterns/faq.php:63
+#: patterns/faq.php:66
 msgid "What kind of support is available?"
 msgstr ""
 
-#: patterns/faq.php:73
+#: patterns/faq.php:76
 msgid "How long is support valid for?"
 msgstr ""
 
-#: patterns/featured-section-1.php:36
+#: patterns/featured-section-1.php:33
 msgid "Free Lifetime Update"
 msgstr ""
 
-#: patterns/featured-section-1.php:40
-msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literatu "
-msgstr ""
-
-#: patterns/featured-section-1.php:56
+#: patterns/featured-section-1.php:51
 msgid "Modern Minimal Design"
 msgstr ""
 
-#: patterns/featured-section-1.php:74
+#: patterns/featured-section-1.php:67
 msgid "Easy Customization"
 msgstr ""
 
-#: patterns/featured-section-2.php:18
-msgid "Feature image 1"
+#: patterns/featured-section-2.php:34
+msgid "2"
 msgstr ""
 
-#: patterns/featured-section-2.php:51
+#: patterns/featured-section-2.php:57
 msgid "Know More"
 msgstr ""
 
-#: patterns/featured-section-4.php:36
+#: patterns/featured-section-4.php:38
 msgid "Digital Marketing"
 msgstr ""
 
@@ -649,15 +644,11 @@ msgstr ""
 msgid "Mobile Application"
 msgstr ""
 
-#: patterns/featured-section-5.php:23
-msgid "Feature image 2"
+#: patterns/featured-section-5.php:38
+msgid "16k+"
 msgstr ""
 
-#: patterns/featured-section-5.php:37
-msgid "16K+"
-msgstr ""
-
-#: patterns/featured-section-5.php:51
+#: patterns/featured-section-5.php:58
 msgid "We Are Dedicated to Shape Perfect Solutions"
 msgstr ""
 
@@ -666,35 +657,61 @@ msgid "Why our marketplace?"
 msgstr ""
 
 #: patterns/featured-section-6.php:23
-msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. "
+#: patterns/section-title-1.php:20
+#: patterns/section-title-2.php:22
+#: patterns/section-title-4.php:21
+#: patterns/section-title-6.php:20
+msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in"
 msgstr ""
 
-#: patterns/featured-section-6.php:42
+#: patterns/featured-section-6.php:43
 msgid "24/7 Customer Support"
 msgstr ""
 
-#: patterns/featured-section-6.php:60
+#: patterns/featured-section-6.php:59
 msgid "Easy Buy & Sell"
 msgstr ""
 
-#: patterns/footer.php:37
+#: patterns/footer.php:25
 msgid "We are available to take the next project with full energy"
 msgstr ""
 
-#: patterns/footer.php:52
+#: patterns/footer.php:39
+#: patterns/navigation-menu.php:15
+msgid "About"
+msgstr ""
+
+#: patterns/footer.php:41
+msgid "FAQs"
+msgstr ""
+
+#: patterns/footer.php:43
+msgid "Authors"
+msgstr ""
+
+#: patterns/footer.php:50
+#: patterns/navigation-menu.php:18
 msgid "Contact"
 msgstr ""
 
-#: patterns/footer.php:59
+#: patterns/footer.php:57
 msgid "000 - 9874 563 210"
 msgstr ""
 
-#: patterns/footer.php:63
+#: patterns/footer.php:61
 msgid "noreply@patternswp.com"
 msgstr ""
 
-#: patterns/hero-banner.php:15
-msgid "Feature image 3"
+#: patterns/footer.php:74
+msgid "Privacy"
+msgstr ""
+
+#: patterns/footer.php:75
+msgid "Policy"
+msgstr ""
+
+#: patterns/footer.php:76
+msgid "Terms & Conditions"
 msgstr ""
 
 #: patterns/hidden-404.php:22
@@ -748,7 +765,7 @@ msgstr ""
 msgid "Get Unlimited Downloads"
 msgstr ""
 
-#: patterns/hidden-primary-header.php:40
+#: patterns/hidden-primary-header.php:42
 msgid "Get Started"
 msgstr ""
 
@@ -794,22 +811,22 @@ msgid "Author"
 msgstr ""
 
 #: patterns/hidden-single-download-sidebar.php:47
-#: patterns/hidden-single-pattern-sidebar.php:45
+#: patterns/hidden-single-pattern-sidebar.php:47
 msgid "Category"
 msgstr ""
 
 #: patterns/hidden-single-download-sidebar.php:53
-#: patterns/hidden-single-pattern-sidebar.php:51
+#: patterns/hidden-single-pattern-sidebar.php:53
 msgid "Categories not found."
 msgstr ""
 
 #: patterns/hidden-single-download-sidebar.php:61
-#: patterns/hidden-single-pattern-sidebar.php:59
+#: patterns/hidden-single-pattern-sidebar.php:61
 msgid "Tags"
 msgstr ""
 
 #: patterns/hidden-single-download-sidebar.php:67
-#: patterns/hidden-single-pattern-sidebar.php:65
+#: patterns/hidden-single-pattern-sidebar.php:67
 msgid "Tags not found."
 msgstr ""
 
@@ -824,6 +841,10 @@ msgstr ""
 #: patterns/navigation-menu.php:14
 msgctxt "label"
 msgid "Home"
+msgstr ""
+
+#: patterns/navigation-menu.php:16
+msgid "Services"
 msgstr ""
 
 #: patterns/pagination.php:15
@@ -876,36 +897,30 @@ msgstr ""
 msgid "Amazing services to build busines growth"
 msgstr ""
 
-#: patterns/section-title-1.php:19
-#: patterns/section-title-2.php:23
-#: patterns/section-title-4.php:20
-msgid "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in"
-msgstr ""
-
-#: patterns/section-title-1.php:24
-#: patterns/section-title-2.php:29
-#: patterns/section-title-4.php:26
+#: patterns/section-title-1.php:25
+#: patterns/section-title-2.php:27
+#: patterns/section-title-4.php:28
 msgid "Try for Free"
 msgstr ""
 
-#: patterns/section-title-1.php:28
+#: patterns/section-title-1.php:29
 msgid "See How It works "
 msgstr ""
 
 #: patterns/section-title-2.php:18
-#: patterns/section-title-3.php:16
+#: patterns/section-title-3.php:19
 msgid "An award winning agency specialized in web design"
 msgstr ""
 
-#: patterns/section-title-4.php:16
+#: patterns/section-title-4.php:17
 msgid "Try it now !"
 msgstr ""
 
-#: patterns/section-title-5.php:17
+#: patterns/section-title-5.php:19
 msgid "Largest Library of Pre-Built Templates"
 msgstr ""
 
-#: patterns/section-title-5.php:27
+#: patterns/section-title-5.php:29
 msgid "View All Demos"
 msgstr ""
 
@@ -963,6 +978,46 @@ msgstr ""
 #: theme.json
 msgctxt "Color name"
 msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Tiny"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Regular"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XX-Large"
 msgstr ""
 
 #: theme.json
