@@ -107,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</h4>
 						</div>
 						<div class="patternswp-psf-card-body at-p at-p">
-							<div class="patternswp-psf-intro-auth--info">								
+							<div class="patternswp-psf-intro-auth--info">
 								<ul class="patternswp-psf-personal-detail at-flx at-flx-col at-gap">
 									<li class="">
 										<dl class="at-flx at-al-itm-ctr at-gap">
@@ -121,7 +121,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<a href="https://wordpress.org/support/theme/patterns-store-front/" target="_blank" rel="noopener noreferrer nofollow">
 													<?php esc_html_e( 'Create A Ticket', 'patterns-store-front' ); ?>
 												</a>
-											</dd>                                                        
+											</dd>
 										</dl>
 									</li>
 									<li class="mt-2">
@@ -134,7 +134,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											</dt>
 											<dd class="at-m">
 												<?php esc_html_e( 'Kathmandu, Nepal', 'patterns-store-front' ); ?>
-											</dd>                                                        
+											</dd>
 										</dl>
 									</li>
 								</ul>
@@ -149,7 +149,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											<span class="dashicons dashicons-twitter"></span>
 										</a>
 									</li>
-								</ul>	
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -290,7 +290,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										<?php
 									}
 									?>
-								</div>				
+								</div>
 							</div>
 						</div>
 							<?php

@@ -40,7 +40,7 @@
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:post-author {"avatarSize":24,"showBio":false,"isLink":true,"className":"pwp-txt-dec-non"} /-->
- 
+
 <!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"tagName":"button","textColor":"quinary","className":"is-style-outline","style":{"spacing":{"padding":{"left":"12px","right":"12px","top":"6px","bottom":"6px"}},"typography":{"fontSize":"0.75rem"},"elements":{"link":{"color":{"text":"var:preset|color|quinary"}}}},"borderColor":"quinary","patterns-store-pattern-button-type":"pattern-preview"} -->

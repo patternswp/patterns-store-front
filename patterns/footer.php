@@ -52,7 +52,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"15px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group">
-		
+
 	<!-- wp:paragraph {"className":"pwp-txt-dec-non","style":{"elements":{"link":{"color":{"text":"var:preset|color|tertiary"},":hover":{"color":{"text":"var:preset|color|primary"}}}},"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"textColor":"tertiary"} -->
 	<p class="pwp-txt-dec-non has-tertiary-color has-text-color has-link-color" style="margin-top:0px;margin-bottom:0px"><a href="<?php echo esc_url( 'callto:000 - 9874 563 210' ); ?>"><?php esc_html_e( '000 - 9874 563 210', 'patterns-store-front' ); ?></a></p>
 	<!-- /wp:paragraph -->
@@ -75,7 +75,7 @@
 	<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Policy', 'patterns-store-front' ); ?>","url":"#"} /-->
 	<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Terms & Conditions', 'patterns-store-front' ); ?>","url":"#"} /-->
 <!-- /wp:navigation -->
-	
+
 <!-- wp:pattern {"slug":"patterns-store-front/copyright"} /-->
 
 </div>
