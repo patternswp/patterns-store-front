@@ -36,14 +36,14 @@ if ( ! class_exists( 'Patterns_Store_Front_Api' ) ) {
 		/**
 		 * Rest route namespace.
 		 *
-		 * @var Patterns_Store_Front_Api
+		 * @var string
 		 */
 		public $namespace = 'patterns-store-front/';
 
 		/**
 		 * Rest route version.
 		 *
-		 * @var Patterns_Store_Front_Api
+		 * @var string
 		 */
 		public $version = 'v1';
 
