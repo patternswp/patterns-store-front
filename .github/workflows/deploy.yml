@@ -104,26 +104,26 @@ jobs:
             --username "$SVN_USERNAME" --password "$SVN_PASSWORD" \
             "$SVN_URL" "$SVN_DIR"
           cd "$SVN_DIR"
-          svn update --set-depth infinity assets
-          svn update --set-depth infinity trunk
-          svn update --set-depth immediates tags
 
-          if [[ -d "tags/$VERSION" ]]; then
+          if [[ -d assets/ ]]; then
+            svn update --set-depth infinity assets
+          fi
+
+          if [[ -d "$VERSION" ]]; then
             echo "ℹ Version $VERSION already published"
             exit 0
           fi
 
+          mkdir -p "$VERSION"
+
           PKG_NAME=$(node -p "require('$GITHUB_WORKSPACE/package.json').name")
-          rsync -rc --delete "$GITHUB_WORKSPACE/deploy/${PKG_NAME}/" trunk/
+          rsync -rc --delete "$GITHUB_WORKSPACE/deploy/${PKG_NAME}/" "$VERSION/"
 
           if [[ -d "$GITHUB_WORKSPACE/.wordpress-org/" ]]; then
             rsync -rc "$GITHUB_WORKSPACE/.wordpress-org/" assets/ --delete
           fi
 
-          svn add . --force > /dev/null
-          svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm % > /dev/null 2>&1 || true
-
-          svn cp trunk "tags/$VERSION"
+          svn add "$VERSION" --force > /dev/null
 
           if [[ -d assets/ ]]; then
             for ext in png jpg gif svg; do
@@ -144,7 +144,7 @@ jobs:
           if [[ "$DRY_RUN" == "true" ]]; then
             echo "→ DRY RUN: No commit performed"
           else
-            svn commit -m "Update to version $VERSION from GitHub" \
+            svn commit -m "Release version $VERSION from GitHub" \
               --no-auth-cache --non-interactive \
               --username "$SVN_USERNAME" --password "$SVN_PASSWORD"
             echo "✓ Deployed $THEME_SLUG v$VERSION"
