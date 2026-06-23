@@ -10,6 +10,13 @@ on:
         description: 'Dry run (no commit)'
         required: false
         default: 'false'
+      slug:
+        description: 'WordPress.org theme slug (defaults to repo name)'
+        required: false
+        default: ''
+
+env:
+  SLUG: ${{ inputs.slug || github.event.repository.name }}
 
 jobs:
   deploy:
@@ -26,20 +33,26 @@ jobs:
 
       - name: Deploy to WordPress.org SVN
         env:
+          THEME_SLUG: ${{ env.SLUG }}
+          VERSION: ${{ github.ref_name }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
         run: |
-          set -eo
-          THEME_SLUG="${{ github.event.repository.name }}"
-          VERSION="${{ github.ref_name }}"
+          set -euo pipefail
+
           VERSION="${VERSION#v}"
-          
+
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+(\.[0-9]+)*$ ]]; then
+            echo "✗ '$VERSION' is not a valid semver tag — trigger from a vX.Y.Z tag"
+            exit 1
+          fi
+
           SVN_URL="https://themes.svn.wordpress.org/${THEME_SLUG}/"
           SVN_DIR="${HOME}/svn-${THEME_SLUG}"
-          
+
           echo "→ Deploying $THEME_SLUG v$VERSION"
-          
+
           svn checkout --depth immediates \
             --non-interactive --trust-server-cert \
             --username "$SVN_USERNAME" --password "$SVN_PASSWORD" \
@@ -48,43 +61,43 @@ jobs:
           svn update --set-depth infinity assets
           svn update --set-depth infinity trunk
           svn update --set-depth immediates tags
-          
+
           if [[ -d "tags/$VERSION" ]]; then
             echo "ℹ Version $VERSION already published"
             exit 0
           fi
-          
+
+          RSYNC_ARGS=(-rc --delete --delete-excluded --exclude='.git' --exclude='.github')
           if [[ -e "$GITHUB_WORKSPACE/.distignore" ]]; then
-            rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" \
-              "$GITHUB_WORKSPACE/" trunk/ --delete --delete-excluded
-          else
-            rsync -rc "$GITHUB_WORKSPACE/" trunk/ --delete --delete-excluded
+            RSYNC_ARGS+=(--exclude-from="$GITHUB_WORKSPACE/.distignore")
           fi
-          
+          rsync "${RSYNC_ARGS[@]}" "$GITHUB_WORKSPACE/" trunk/
+
           if [[ -d "$GITHUB_WORKSPACE/.wordpress-org/" ]]; then
             rsync -rc "$GITHUB_WORKSPACE/.wordpress-org/" assets/ --delete
           fi
-          
+
           svn add . --force > /dev/null
-          svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm %@ > /dev/null 2>&1 || true
-          
+          svn status | grep '^\!' | sed 's/! *//' | xargs -I% svn rm % > /dev/null 2>&1 || true
+
           svn cp trunk "tags/$VERSION"
-          
-          for ext in png jpg gif svg; do
-            find assets/ -maxdepth 1 -name "*.${ext}" 2>/dev/null | while read f; do
-              case $ext in
-                png) svn propset svn:mime-type "image/png" "$f" 2>/dev/null || true ;;
-                jpg) svn propset svn:mime-type "image/jpeg" "$f" 2>/dev/null || true ;;
-                gif) svn propset svn:mime-type "image/gif" "$f" 2>/dev/null || true ;;
-                svg) svn propset svn:mime-type "image/svg+xml" "$f" 2>/dev/null || true ;;
-              esac
+
+          if [[ -d assets/ ]]; then
+            for ext in png jpg gif svg; do
+              find assets/ -maxdepth 1 -name "*.${ext}" | while IFS= read -r f; do
+                case $ext in
+                  png) svn propset svn:mime-type "image/png"     "$f" 2>/dev/null || true ;;
+                  jpg) svn propset svn:mime-type "image/jpeg"    "$f" 2>/dev/null || true ;;
+                  gif) svn propset svn:mime-type "image/gif"     "$f" 2>/dev/null || true ;;
+                  svg) svn propset svn:mime-type "image/svg+xml" "$f" 2>/dev/null || true ;;
+                esac
+              done
             done
-          done
-          
-          svn update
+          fi
+
           echo "→ Files to be committed:"
           svn status
-          
+
           if [[ "$DRY_RUN" == "true" ]]; then
             echo "→ DRY RUN: No commit performed"
           else
