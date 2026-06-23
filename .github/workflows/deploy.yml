@@ -14,9 +14,14 @@ on:
         description: 'WordPress.org theme slug (defaults to repo name)'
         required: false
         default: ''
+      version:
+        description: 'Version tag for manual runs, e.g. v2.0.0'
+        required: false
+        default: ''
 
 env:
   SLUG: ${{ inputs.slug || github.event.repository.name }}
+  VERSION: ${{ inputs.version || github.ref_name }}
 
 jobs:
   deploy:
@@ -41,7 +46,7 @@ jobs:
       - name: Deploy to WordPress.org SVN
         env:
           THEME_SLUG: ${{ env.SLUG }}
-          VERSION: ${{ github.ref_name }}
+          VERSION: ${{ env.VERSION }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
