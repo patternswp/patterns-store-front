@@ -19,7 +19,7 @@
 		// <!-- wp:pattern {"slug":"patterns-store-front/query-pattern-header"} /--> .
 		require 'query-pattern-header.php';
 	?>
-	
+
 	<div class="wp-block-query alignwide">
 		<!-- wp:post-template {"align":"full","layout":{"type":"grid","columnCount":4}} -->
 			<!-- wp:pattern {"slug":"patterns-store-front/hidden-query-pattern-post-template-content"} /-->

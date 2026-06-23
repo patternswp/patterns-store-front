@@ -33,7 +33,7 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%">    
+<div class="wp-block-column" style="flex-basis:33.33%">
 <!-- wp:group {"className":"at-box-sdw","style":{"border":{"radius":"5px"},"spacing":{"blockGap":"var:preset|spacing|10"}},"backgroundColor":"default","layout":{"type":"constrained"}} -->
 <div class="wp-block-group at-box-sdw has-default-background-color has-background" style="border-radius:5px"><!-- wp:image {"width":"40px","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|primary"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
 <figure class="wp-block-image size-full is-resized" style="margin-bottom:var(--wp--preset--spacing--30)"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/bs-icon-ui-check-grid.png" style="width:40px"/></figure>

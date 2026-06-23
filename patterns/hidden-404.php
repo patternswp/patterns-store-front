@@ -1,6 +1,6 @@
 <?php
 /**
- * Title:404
+ * Title: 404
  * Slug: patterns-store-front/hidden-404
  * Inserter: no
  *
@@ -20,7 +20,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group">
-	
+
 <!-- wp:heading {"textAlign":"left","level":1,"align":"wide","style":{"typography":{"fontSize":"8rem"}}} -->
 <h1 class="wp-block-heading alignwide has-text-align-left" style="font-size:8rem"><?php esc_html_e( 'Ooops!', 'patterns-store-front' ); ?></h1>
 <!-- /wp:heading -->
@@ -50,6 +50,6 @@
 <div style="height:200px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer --></div>
 <!-- /wp:group -->
- 
+
 </main>
 <!-- /wp:group -->

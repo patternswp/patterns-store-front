@@ -14,7 +14,7 @@
 <!-- wp:group {"metadata":{"name":"Hero content"},"align":"full","className":"at-pos at-z-idx patternswp-psf-hero-banner-content","style":{"spacing":{"padding":{"right":"0px","left":"0px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull at-pos at-z-idx patternswp-psf-hero-banner-content"
     style="padding-right:0px;padding-left:0px">
-    
+
 <!-- wp:pattern {"slug":"patterns-store-front/section-title-1"} /-->
 
 </div>

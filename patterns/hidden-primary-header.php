@@ -31,7 +31,7 @@
 <div class="wp-block-group alignwide" style="padding-top:25px;padding-bottom:25px;">
 
  <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|40"},"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group"> 
+<div class="wp-block-group">
 <!-- wp:pattern {"slug":"patterns-store-front/site-identity"} /-->
 <!-- wp:pattern {"slug":"patterns-store-front/navigation-menu"} /-->
 </div>

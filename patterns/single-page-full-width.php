@@ -18,11 +18,11 @@
 	<!-- wp:template-part {"slug":"single-header", "align":"full"} /-->
 	<!-- wp:spacer {"height":"var:preset|spacing|80"} -->
 	<div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->    
+	<!-- /wp:spacer -->
 	<!-- wp:post-content {"align":"wide","className":"pwp-child-reset ","layout":{"type":"constrained"}} /-->
 	<!-- wp:spacer {"height":"var:preset|spacing|80"} -->
 	<div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
-	<!-- /wp:spacer -->    
+	<!-- /wp:spacer -->
 </main>
 <!-- /wp:group -->
 
